@@ -11,9 +11,7 @@ RUN apt install -y \
 	openssh-server \
 	neovim \
 	zoxide \
-	nvtop \
-	nvidia-cuda-toolkit \
-	hashcat-nvidia
+	nvtop
 
 # Set ssh port
 RUN sed -i 's/^#Port 22/Port 2222/' /etc/ssh/sshd_config
