@@ -5,7 +5,7 @@ FROM lscr.io/linuxserver/kali-linux:latest
 RUN apt update && apt install -y \
 	fish \
 	kali-linux-large \
-	openssh-server
+	openssh-server \
 	neovim \
 	zoxide \
 	nvtop \
