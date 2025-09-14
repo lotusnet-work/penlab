@@ -4,9 +4,14 @@ FROM lscr.io/linuxserver/kali-linux:latest
 # Install package selection
 RUN apt update && apt install -y \
 	fish \
-	neovim \
-	nvtop \
+	kali-linux-large \
 	openssh-server
+	neovim \
+	zoxide \
+	nvtop \
+	nvidia-cuda-toolkit \
+	xserver-xorg-video-nvidia \
+	hashcat-nvidia
 
 # Set ssh port
 RUN sed -i 's/^#Port 22/Port 2222/' /etc/ssh/sshd_config
