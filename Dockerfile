@@ -5,8 +5,7 @@ FROM lscr.io/linuxserver/kali-linux:latest
 RUN apt update && apt upgrade -y
 
 # Install package selection
-RUN apt install -y \
-	kali-linux-large \
+RUN apt install -y kali-linux-default \
 	fish \
 	openssh-server \
 	neovim \
