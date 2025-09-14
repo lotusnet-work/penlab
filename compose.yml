@@ -1,0 +1,30 @@
+services:
+  penlab:
+    container_name: penlab
+    restart: unless-stopped
+    hostname: "penlab"
+    build:
+      context: .
+    security_opt:
+      - seccomp:unconfined
+      - label=disable
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
+      - "TITLE=penlab"
+    volumes:
+      - "/root/docker/kali/data:/config:Z"
+      - "/var/run/docker.sock:/var/run/docker.sock:Z"
+    ports:
+      - 2222:2222
+      - 1337:3000
+      - 1338:3001
+    shm_size: "1gb"
+    deploy:                  
+      resources:         
+        reservations:                                         
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [compute,video,graphics,utility]
