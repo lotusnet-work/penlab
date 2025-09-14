@@ -12,6 +12,8 @@ RUN apt install -y \
 	neovim \
 	zoxide \
 	nvtop \
+	nvidia-cuda-toolkit \
+	hashcat-nvidia
 
 # Set ssh port
 RUN sed -i 's/^#Port 22/Port 2222/' /etc/ssh/sshd_config
