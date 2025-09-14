@@ -7,5 +7,5 @@ Based on the docker-kali image from [linuxserver.io](https://docs.linuxserver.io
 - [x] WebUI
 - [x] SSH
 - [ ] VNC
-- [ ] All tools pre-installed
+- [x] All tools pre-installed
 - [x] Nvidia GPU support
